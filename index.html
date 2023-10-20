@@ -27,7 +27,37 @@
         </nav>
     </header>
 
-    <main></main>
+    <main>
+        <section class="interface">
+            <h1>Trouvez votre hébergement pour des vacances de rêve<br><span>En plein centre-ville ou en pleine nature</span></h1>
+            
+            <form class="search-bar">
+                <i class="fas fa-location-dot"></i>
+                <input type="text" id="inpSearchBar" placeholder="Marseille, France">
+                <button type="submit">Rechercher</button>
+            </form>
+
+            <div class="filter">
+                <span>Filtres</span>
+                <div class="container">
+                    <button><i class="fas fa-money-bill-wave"></i>Économique</button>
+                    <button><i class="fas fa-person"></i>Familial</button>
+                    <button><i class="fas fa-heart"></i>Romantique</button>
+                    <button><i class="fas fa-fire"></i>Nos pépites</button>
+                </div>
+            </div>
+
+            <p class="information"><i class="fas fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p>
+        </section>
+    </main>
+
     <footer></footer>
+
+
+    <script>
+        // Desactivation form
+        const form = document.querySelector('.search-bar');
+        form.addEventListener('submit', (e) => { e.preventDefault() });
+    </script>
 </body>
 </html>
