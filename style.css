@@ -122,6 +122,7 @@ header nav a:hover {
     display: flex;
     overflow: hidden;
     border-radius: 15px;
+    position: relative;
 }
 
 .search-bar i {
@@ -158,8 +159,13 @@ header nav a:hover {
     color: #fff;
 }
 
+.search-bar button i {
+    display: none;
+}
+
 .filter,
 .filter .container {
+    row-gap: 20px;
     display: flex;
     column-gap: 15px;
     align-items: center;
@@ -212,6 +218,7 @@ header nav a:hover {
 .information i {
     width: 24px;
     height: 24px;
+    min-width: 24px;
 
     display: flex;
     align-items: center;
@@ -221,4 +228,51 @@ header nav a:hover {
     border: solid 1px #D9D9D9;
     border-radius: 12px;
     font-size: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+    .filter {
+        align-items: unset;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .interface {
+        margin: 0 20px;
+    }
+
+    .search-bar {
+        width: unset;
+    }
+
+    .search-bar input {
+        width: calc(100% - 50px);
+    }
+    
+    .search-bar button {
+        width: 49px;
+        border-radius: 15px;
+        position: absolute;
+        right: 0;
+    }
+
+    .search-bar button span {
+        display: none;
+    }
+
+    .search-bar button i {
+        background-color: transparent;
+        color: white;
+        display: flex;
+    }
+
+    .filter .container {
+        flex-wrap: wrap;
+    }
+
+    .filter .container button {
+        width: calc(50% - 8px);
+        white-space: nowrap;
+    }
 }
