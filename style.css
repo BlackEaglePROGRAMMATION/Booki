@@ -97,6 +97,12 @@ header nav a:hover {
                             Main
 ----------------------------------------------------------- */
 
+main {
+    display: flex;
+    row-gap: 35px;
+    flex-direction: column;
+}
+
 /* Interface */
 
 .interface {
@@ -275,4 +281,179 @@ header nav a:hover {
         width: calc(50% - 8px);
         white-space: nowrap;
     }
+}
+
+.container-section {
+    display: flex;
+    padding: 0 50px;
+    column-gap: 40px;
+}
+
+/* Hebergement */
+
+.hebergement,
+.popular {
+    display: flex;
+    row-gap: 30px;
+    align-items: start;
+    flex-direction: column;
+    background-color: #F2F2F2;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.hebergement {
+    width: 66%;
+}
+
+.hebergement h2 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.hebergement .container-card {
+    width: 100%;
+    row-gap: 30px;
+    display:  flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+}
+
+.hebergement .container-card .card {
+    display: flex;
+    row-gap: 4px;
+    flex-direction: column;
+    width: calc(33% - 18px);    
+    background-color: white;
+    box-shadow: 0 2px 8px #D9D9D999;
+    padding-bottom: 13px;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.hebergement .container-card .card:hover {
+    transform: scale(1.05);
+}
+
+.hebergement .card .container-img {
+    width: 100%;
+    height: 124px;
+    border: solid 5px white;
+}
+
+.hebergement .container-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.hebergement .container-descrip {
+    display: flex;
+    row-gap: 4px;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+.hebergement .container-descrip h3 {
+    font-size: 1rem;
+}
+
+.hebergement .container-descrip p {
+    font-size: 14px;
+}
+
+.hebergement .container-descrip .rating {
+    display: flex;
+}
+
+.hebergement .btn-more {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.popular {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.popular h2 {
+    width: 100%;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.popular h2 .fas {
+    color: #0065FC;
+}
+
+.popular .container-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    row-gap: 30px;
+    flex-direction: column;
+}
+
+.popular .container-card .card {
+    width: 100%;
+    height: 33%;
+    display: flex;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: white;
+    transition: .2s;
+}
+
+.popular .container-card .card:hover {
+    transform: scale(1.05);
+}
+
+.popular .card .container-img {
+    width: 33%;
+    height: 100%;
+    border: solid 5px white;
+}
+
+.popular .container-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+    object-fit: cover;
+}
+
+.popular .container-descrip {
+    width: 66%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 5px 5px 15px;
+}
+
+.popular .container-descrip h3 {
+    font-size: 1rem;
+}
+
+.popular .container-descrip p {
+    font-size: 14px;    
+    font-weight: 400;
+    padding-top: 5px;
+}
+
+.popular .container-descrip .rating {
+    margin-bottom: 5px;
+    display: flex;
+}
+
+.rating .fa-star {
+    color: #0065FC;
+    font-size: 13px;
+}
+
+.rating .grey {
+    color: #F2F2F2;
 }
